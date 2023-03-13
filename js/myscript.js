@@ -7,7 +7,7 @@
 
 
 
-const mailList = ["pincopanco@gmail.com" , "boolean-boy@gmail.com" , "afakemail@fake.com"];
+const mailList = ["mail01@gmail.com" , "boolean-boy@gmail.com" , "afakemail@fake.com"];
 
 const send = document.getElementById("send-email");
 send.addEventListener("click" , checkMail);
@@ -17,15 +17,17 @@ emailCheck.classList.remove("d-none");
 function checkMail()
 {
     let mail = document.getElementById("input-email").value.toLowerCase();
-
-    if (mailList.includes(mail))
+    for(let i = 0; i < mailList.length; i++)
     {
-        emailCheck.innerHTML= `<div class="card my-5"> Mail accettata, benvenuto </div> `;
-
-    }
-    else
-    {
-        emailCheck.innerHTML = `<div class="card my-5"> Accesso rifiutato </div> `;
+        if (mailList[i] == mail)
+        {
+            emailCheck.innerHTML = `<div class="card my-5"> Mail accettata, benvenuto </div> `;
+            break;
+        }
+        else
+        {
+            emailCheck.innerHTML = `<div class="card my-5"> Accesso rifiutato ${i}</div> `;
+        }
     }
 }
 
