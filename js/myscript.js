@@ -26,7 +26,7 @@ function checkMail()
         }
         else
         {
-            emailCheck.innerHTML = `<div class="card my-5"> Accesso rifiutato ${i}</div> `;
+            emailCheck.innerHTML = `<div class="card my-5"> Accesso rifiutato </div> `;
         }
     }
 }
