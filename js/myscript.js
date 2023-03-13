@@ -20,12 +20,12 @@ function checkMail()
 
     if (mailList.includes(mail))
     {
-        emailCheck.innerHTML= `Mail accettata, benvenuto`;
+        emailCheck.innerHTML= `<div class="card my-5"> Mail accettata, benvenuto </div> `;
 
     }
     else
     {
-        emailCheck.innerHTML = `Accesso rifiutato`;
+        emailCheck.innerHTML = `<div class="card my-5"> Accesso rifiutato </div> `;
     }
 }
 
